@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hejo: #00a676;
+  --bodas: #f7f9f9;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  background-color: var(--bodas);
+}
+
+#navbar {
+  width: 200px;
+  background-color: var(--hejo);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  border-right: solid;
+  border-color: rgba(158, 180, 180, 0.4);
+}
+
+#navbar li {
+  color: #b1b5c9;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: var(--bodas);
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: var(--bodas);
+  color: var(--hejo);
+}
+
+header {
+  color: var(--bodas);
+  margin: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: thin;
+}
+
+#main-doc {
+  margin-left: 200px;
+  padding: 1px 16px;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+  width: 100%;
+  color: var(--hejo);
+  font-size: 2rem;
+}
+
+#main-doc h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+section article {
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+article p {
+  margin-bottom: 15px;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  margin: 15px 0;
+  padding: 1em 1.4em;
+  line-height: 2;
+  background-color: #f5eeee;
+  border-radius: 5px;
+}
+
+code span {
+  display: block;
+}
+
+span span {
+  display: inline;
+}
+
+blockquote {
+  margin: 15px 0;
+}
+
+@media only screen and (max-width: 815px) {
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 275px;
+    z-index: 1;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}

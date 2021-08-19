@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>freeCodeDocument | Setup VS Code Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Setup Document</header>
+      <ul>
+        <li>
+          <a href="#Overview" class="nav-link">Overview</a>
+        </li>
+        <li>
+          <a href="#Linux" class="nav-link">Linux</a>
+        </li>
+        <li>
+          <a href="#macOS" class="nav-link">macOS</a>
+        </li>
+        <li>
+          <a href="#Windows" class="nav-link">Windows</a>
+        </li>
+        <li>
+          <a href="#Raspberry_Pi" class="nav-link">Raspberry Pi</a>
+        </li>
+        <li>
+          <a href="#Additional_Components" class="nav-link">Additional Components</a>
+        </li>
+        <li>
+          <a href="#Reference" class="nav-link">Reference</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Overview">
+        <header>Overview</header>
+        <article>
+          <h2>Getting Started</h2>
+          <p>
+            Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich
+            ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). Begin your journey with VS Code with these
+            <a href="https://code.visualstudio.com/docs/getstarted/introvideos" target="_blank">introductory videos.</a>
+          </p>
+
+          <h2>Update cadence</h2>
+          <p>
+            VS Code releases a new version each month with new features and important bug fixes. Most platforms support auto updating and you will be prompted to install the new release when it becomes available. You can also manually check
+            for updates by running <strong>Help > Check for Updates</strong> on Linux and Windows or running <strong>Code > Check for Updates</strong> on macOS.
+          </p>
+
+          <h2>Insiders nightly build</h2>
+          <p>
+            If you'd like to try our nightly builds to see new features early or verify bug fixes, you can install our <a href="https://code.visualstudio.com/insiders/" target="_blank">Insiders build.</a> The Insiders build installs
+            side-by-side with the monthly Stable build and you can freely work with either on the same machine. The Insiders build is the same one the VS Code development team uses on a daily basis and we really appreciate people trying out
+            new features and providing feedback.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Linux">
+        <header>Linux</header>
+        <article>
+          <h2>Installation</h2>
+          <p>See the <a href="https://code.visualstudio.com/download" target="_blank">Download Visual Studio Code</a> page for a complete list of available installation options.</p>
+          <p>
+            By downloading and using Visual Studio Code, you agree to the <a href="https://code.visualstudio.com/license" target="_blank">license terms</a> and
+            <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank">privacy statement.</a>
+          </p>
+
+          <h2>Debian and Ubuntu based distributions</h2>
+          <p>
+            The easiest way to install Visual Studio Code for Debian/Ubuntu based distributions is to download and install the .deb package (64-bit), either through the graphical software center if it's available, or through the command
+            line with:
+          </p>
+          <code>
+            <span>sudo apt install ./&ltfile&gt.deb</span><br />
+            <span style="color: #008000"># If you're on an older Linux distribution, you will need to run this instead:</span>
+            <span style="color: #008000"># sudo dpkg -i /&ltfile&gt.deb</span>
+            <span style="color: #008000"># sudo apt-get install -f # Install dependencies</span>
+          </code>
+          <p>Note that other binaries are also available on the <a href="https://code.visualstudio.com/Download" target="_blank">VS Code download page.</a></p>
+          <p>
+            Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager. Alternatively, the repository and key can also be installed manually with the
+            following script:
+          </p>
+          <code>
+            <span>wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg</span>
+            <span>sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/</span>
+            <span
+              >sudo sh -c
+              <span style="color: #a31515"
+                >'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'</span
+              ></span
+            >
+            <span>rm -f packages.microsoft.gpg</span>
+          </code>
+          <p>Then update the package cache and install the package using:</p>
+          <code>
+            <span>sudo apt install apt-transport-https</span>
+            <span>sudo apt update</span>
+            <span>sudo apt install <span style="color: #008000">code # or code-insiders</span></span>
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="macOS">
+        <header>macOS</header>
+        <article>
+          <h2>Installation</h2>
+          <ol>
+            <li><a href="https://code.visualstudio.com/docs?dv=osx">Download Visual Studio Code</a> for macOS.</li>
+            <li>Open the browser's download list and locate the downloaded archive.</li>
+            <li>Extract the archive contents. Use double-click for some browsers or select the 'magnifying glass' icon with Safari.</li>
+            <li>Drag <span style="color: #c7254e">Visual Studio Code.app</span> to the <span style="color: #c7254e">Applications</span> folder, making it available in the macOS Launchpad.</li>
+            <li>Add VS Code to your Dock by right-clicking on the icon to bring up the context menu and choosing <strong>Options, Keep in Dock.</strong></li>
+          </ol>
+
+          <h2>Launching from the command line</h2>
+          <p>You can also run VS Code from the terminal by typing 'code' after adding it to the path:</p>
+          <ul>
+            <li>Launch VS Code.</li>
+            <li>Open the <strong>Command Palette</strong> ( <span style="color: #0072be">Cmd+Shift+P</span> ) and type 'shell command' to find the <strong>Shell Command: Install 'code' command in PATH</strong> command.</li>
+            <li>Restart the terminal for the new <span style="color: #c7254e">$PATH</span> value to take effect. You'll be able to type 'code .' in any folder to start editing files in that folder.</li>
+          </ul>
+          <blockquote>
+            <p>
+              <strong>Note: </strong>If you still have the old <span style="color: #c7254e">code</span> alias in your <span style="color: #c7254e">.bash_profile</span> (or equivalent) from an early VS Code version, remove it and replace it
+              by executing the <strong>Shell Command: Install 'code' command in PATH</strong> command.
+            </p>
+          </blockquote>
+        </article>
+      </section>
+
+      <section class="main-section" id="Windows">
+        <header>Windows</header>
+        <article>
+          <h2>Installation</h2>
+          <ol>
+            <li>Download the <a href="https://code.visualstudio.com/docs?dv=win" target="_blank">Visual Studio Code installer</a> for Windows</li>
+            <li>Once it is downloaded, run the installer (VSCodeUserSetup-{version}.exe). This will only take a minute.</li>
+            <li>By default, VS Code is installed under <span style="color: #c7254e">C:\users\{username}\AppData\Local\Programs\Microsoft VS Code</span> .</li>
+          </ol>
+          <p>Alternatively, you can also download a <a href="https://code.visualstudio.com/docs/?dv=winzip">Zip archive</a>, extract it and run Code from there.</p>
+          <blockquote>
+            <p>
+              <strong>Note: </strong>.NET Framework 4.5.2 or higher is required for VS Code. If you are using Windows 7, make sure you have at least
+              <a href="https://www.microsoft.com/en-us/download/details.aspx?id=42643">.NET Framework 4.5.2</a> installed. You can check your version of .NET Framework using this command,
+              <span style="color: #c7254e">reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\full" /v version</span> from a command prompt.
+            </p>
+          </blockquote>
+          <blockquote>
+            <p>
+              <strong>Tip: </strong>Setup will add Visual Studio Code to your <span style="color: #c7254e">%PATH%</span>, so from the console you can type 'code .' to open VS Code on that folder. You will need to restart your console after
+              the installation for the change to the <span style="color: #c7254e">%PATH%</span> environmental variable to take effect.
+            </p>
+          </blockquote>
+        </article>
+      </section>
+
+      <section class="main-section" id="Raspberry_Pi">
+        <header>Raspberry Pi</header>
+        <article>
+          <h2>Installation</h2>
+          <p>
+            Visual Studio Code is officially distributed via the <a href="https://www.raspberrypi.org/software/operating-systems" target="_blank">Raspberry Pi OS</a> (previously called Raspbian) APT repository, in both 32-bit and 64-bit
+            variants.
+          </p>
+          <p>You can install it by running:</p>
+          <code>
+            <span>sudo apt update</span>
+            <span>sudo apt install code</span>
+          </code>
+
+          <h2>Running VS Code</h2>
+          <p>After installing the VS Code package, you can run VS Code by typing <span style="color: #c7254e">code</span> in a terminal or launching it via the <strong>Programming</strong> menu.</p>
+
+          <h2>Updates</h2>
+          <p>Your Raspberry Pi should handle updating VS Code in the same way as other packages on the system:</p>
+          <code>
+            <span>sudo apt update</span>
+            <span>sudo apt upgrade code</span>
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Additional_Components">
+        <header>Additional Components</header>
+        <article>
+          <p>
+            Visual Studio Code is a small download by design and only includes the minimum number of components shared across most development workflows. Basic functionality like the editor, file management, window management, and
+            preference settings are included. A JavaScript/TypeScript language service and Node.js debugger are also part of the base install.
+          </p>
+          <p>
+            If you are used to working with larger, monolithic development tools (IDEs), you may be surprised that your scenarios aren't completely supported out of the box. For example, there isn't a
+            <strong>File > New Project</strong> dialog with pre-installed project templates. Most VS Code users will need to install additional components depending on their specific needs.
+          </p>
+          <h2>Commonly used components</h2>
+          <p>Here are a few commonly installed components:</p>
+          <ul>
+            <li><a href="https://git-scm.com/download" target="_blank">Git</a> - VS Code has built-in support for source code control using Git but requires Git to be installed separately.</li>
+            <li><a href="https://nodejs.org/en/" target="_blank">Node.js (includes npm)</a> - A cross platform runtime for building and running JavaScript applications.</li>
+            <li><a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> - The TypeScript compiler, <span style="color: #c7254e">tsc</span>, for transpiling TypeScript to JavaScript.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a href="https://code.visualstudio.com/docs" target="_blank">VS Code</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
